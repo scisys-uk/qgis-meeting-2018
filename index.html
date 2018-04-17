@@ -11,6 +11,24 @@
     <link rel="stylesheet" href="bower_components/bootstrap/dist/css/bootstrap.min.css">
     <link rel="stylesheet" href="bower_components/ionicons/css/ionicons.min.css">
     <link rel="stylesheet" href="assets/css/main.css">
+    <script type="text/javascript">
+    $(document).ready(function(){
+	var my_posts = $("[rel=tooltip]");
+
+	var size = $(window).width();
+	for(i=0;i<my_posts.length;i++){
+		the_post = $(my_posts[i]);
+
+		if(the_post.hasClass('invert') && size >=767 ){
+			the_post.tooltip({ placement: 'left'});
+			the_post.css("cursor","pointer");
+		}else{
+			the_post.tooltip({ placement: 'rigth'});
+			the_post.css("cursor","pointer");
+		}
+	}
+});
+    </script>
 </head>
 <body data-spy="scroll" data-target="#site-nav">
     <nav id="site-nav" class="navbar navbar-fixed-top navbar-custom">
@@ -134,41 +152,167 @@
     </section>
     
     <section id="schedule" class="section schedule"></section>
-        <div class="container">
-            <div class="row">
-                <div class="col-md-12">
-                    <h3 class="section-title">Event Schedule</h3>
+    <div class="container">
+        <div class="page-header text-center">
+            <h1 id="timeline">Schedule</h1>
+        </div>
+        <ul class="timeline">
+            <li>
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                  Introduction & Welcome - 9:30 to 10:00 - David Pegg (SCISYS)
+                  
                 </div>
-            </div>
-            <div class="row">
-                <div class="col-md-4 col-sm-6">
-                    <div class="schedule-box">
-                        <div class="time">
-                            <time datetime="09:00">09:00 am</time> - <time datetime="22:00">10:00 am</time>
+                <div class="timeline-body">
+                  <p> Welcome and overview of the agenda for the day</p>
+                  
+                </div>
+                
+                
+              </div>
+            </li>
+            
+            <li  class="timeline-inverted">
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                    QGIS Server & Geonode - 10:00 to  10:30 - Pascal Coulon (SCISYS)
+                </div>
+                <div class="timeline-body">
+                  <p>An overview of QGIS Server combined with geonode. A comparaison with Geonode and GeoserverAn overview of QGIS Server combined with geonode. A comparaison with Geonode and Geoserver.</p>
+                 
+                </div>
+                
+               
+              </div>
+            </li>
+            <li>
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                    Contributing to QGIS - 10:30 to 11:00 - Dave Barter (Lutra)
+                  
+                </div>
+                <div class="timeline-body">
+                  <p>We all love our digital maps and are used to navigating them with our fingers and mice. But what about those who cannot use a keyboard or input device? How can they get a map to show them the information they desire? Dave Barter has been researching an alternative interface for digital maps using voice commands and a new cartographic language. Dave is now turning his focus to QGiS, can we get it to work “hands free”?</p>
+                  
+                </div>
+                
+               
+              </div>
+            </li>
+            
+            <li  class="timeline-inverted">
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+              
+              <div class="timeline-panel">
+                    <div class="timeline-heading">
+                            QGIS Enterprise Rollout - 11:00 to 11:30 - Paul Wittle (Doreset CC)
+                          
                         </div>
-                        <h3>Welcome and intro</h3>
-                        <p>Mustafizur Khan, SD Asia</p>
-                    </div>
+                <div class="timeline-body">
+                  <p>Is development needed to create managed templates? What can be done with out of date workspaces? Is the GeoPackage the future? Is it really compatible with ESRI, MapInfo etc? Migration pitfalls and how to avoid them (MapInfo/ESRI/Other)</p>
+                  
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="schedule-box">
-                        <div class="time">
-                            <time datetime="10:00">10:00 am</time> - <time datetime="22:00">10:00 am</time>
+                
+                
+              </div>
+            </li>
+            <li>
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                        UofG OSGeo Lab activities - 11:30 to 12:00 - Rob Berry (University of Gloucester)
+                  
+                </div>
+                <div class="timeline-body">
+                  <p>Details to come.</p>
+                  
+                </div>
+                
+               
+              </div>
+            </li>
+            
+            <li  class="timeline-inverted">
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+              <div class="timeline-panel">
+                <div class="timeline-heading">
+                    Lunch and Workshop - 12:00 - 13:30
+                  
+                </div>
+                <div class="timeline-body">
+                  <p>Free lunch and a series of hands on workshop to allow questions and answers on QGIS, QGIS Server, etc. </p>
+                  
+                </div>
+                
+               
+              </div>
+            </li>
+            <li>
+              <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+              <div class="timeline-panel">
+                    <div class="timeline-heading">
+                            QGIS SLD combatibility with GeoServer - 13:30 - 14:00
+                          
                         </div>
-                        <h3>Tips and share</h3>
-                        <p>Mustafizur Khan, SD Asia</p>
-                    </div>
+                <div class="timeline-body">
+                  How can one manage styling (i.e. SLD) between QGIS and GeoServer? What are the options?
                 </div>
-                <div class="col-md-4 col-sm-6">
-                    <div class="schedule-box">
-                        <div class="time">
-                            <time datetime="10:00">10:00 am</time> - <time datetime="22:00">10:00 am</time>
+                
+                
+              </div>
+            </li>
+            <li  class="timeline-inverted">
+                    <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+                    <div class="timeline-panel">
+                      <div class="timeline-heading">
+                            What is GeoPackage?- 14:00 - 14:30 - Ant Scott (Astun technology)
+                        
+                      </div>
+                      <div class="timeline-body">
+                        <p>A look at the OGC GeoPackage, now adopted as the QGIS default format. What are its capabilities, strengths and weaknesses, and should you be using it?</p>
+                        
+                      </div>
+                      
+                     
+                    </div>
+                  </li>
+                  <li>
+                        <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+                        <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                      QOpen Forum - Blockers to move away from ArcMap - 14:30 - 15:00 - Pascal Coulon (SCISYS)
+                                    
+                                  </div>
+                          <div class="timeline-body">
+                                Share their thoughts on migrate away from ArcMap: key blockers, key drivers. This is an open forum allowing all attendees to share their views and thoughts on the topic.
+                          </div>
+                          
+                          
                         </div>
-                        <h3>View from the top</h3>
-                        <p>Mustafizur Khan, SD Asia</p>
-                    </div>
-                </div>
-            </div>
+                      </li>
+                      <li  class="timeline-inverted">
+                            <div class="timeline-badge primary"><a><i class="glyphicon glyphicon-record invert" rel="tooltip" title="11 hours ago via Twitter" id=""></i></a></div>
+                            <div class="timeline-panel">
+                              <div class="timeline-heading">
+                                    Conclusion- 15:00 - 15:30 
+                                
+                              </div>
+                              <div class="timeline-body">
+                                <p>Final questions and answers. Wrap up session.</p>
+                                
+                              </div>
+                              
+                             
+                            </div>
+                          </li>
+
+            <li class="clearfix" style="float: none;"></li>
+        </ul>
+    </div>
+                  
     </section>
 
     <section id="partner" class="section partner">
@@ -287,3 +431,4 @@
     <script src="assets/js/main.js"></script>
 </body>
 </html>
+
